@@ -1,0 +1,79 @@
+*{
+    font-family:'Convergence';
+    padding: 0px;
+    margin: 0px;
+}
+
+.bgimage{
+
+    background-image: url('hms1.jpg');
+    background-size: 100% 100%;
+    width:100%;
+    height:100vh;
+}
+
+.menu{
+
+    width:100%;
+    height:90px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.leftmenu{
+   
+
+    width: 25%;
+    line-height: 100px;
+    float: left;
+}
+
+.leftmenu h4{
+   
+    padding-left: 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.rightmenu{
+    width:75%;
+    height:100px;
+    float:right;
+}
+
+.rightmenu ul{
+    margin-left: 250px;
+}
+
+.rightmenu ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 15px;
+    color:white;
+    font-weight: bold;
+    line-height: 35px;
+    margin: 30px;
+
+}
+
+.rightmenu ul li:hover{
+    color: orange;
+}
+
+.text{
+    width: 100%;
+    margin-top: 110px;
+    text-align: center;
+    color:rgba(10, 10, 10, 0.982);
+}
+
+.text h3{
+    font-size: 15px;
+}
+
+.text h1{
+
+    font-size: 60px;
+
+}

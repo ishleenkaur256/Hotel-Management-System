@@ -1,0 +1,19 @@
+*{
+    font-family:'Convergence';
+    padding: 0px;
+    margin: 0px;
+}
+
+.rightmenu ul{
+    margin-left:650px;
+}
+.rightmenu ul li{
+    display: inline-block;
+    list-style:none;
+    font-size: 15px;
+    color:Orange;
+    font-weight: bold;
+    line-height: 35px;
+    margin: 10px;
+
+}
