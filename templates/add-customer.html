@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href=”https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css” rel=”stylesheet”>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  function myFun(){
+    var a = document.myForm.email.value;
+    var b = document.getElementById("phone").value;
+    var c = document.getElementById("name").value;
+    var correct_way=/^[A-Za-z]+$/;
+    if(a.indexOf('@')<=0){
+          document.getElementById("Message").innerHTML="Invalid Email Id";
+          return false;
+        }
+    if((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.')){
+          document.getElementById("Message").innerHTML="Invalid Email Id";
+          return false;
+        }
+    if(b==""){
+          document.getElementById("messages").innerHTML="Invalid Phone Number";
+          return false;
+        }
+    if(isNaN(b)){
+          document.getElementById("messages").innerHTML="Invalid Phone Number";
+          return false;
+        }
+    if(b.length<10){
+          document.getElementById("messages").innerHTML="Invalid Phone Number";
+          return false;
+        }
+    if(c==""){
+          document.getElementById("msg").innerHTML="Invalid Name";
+          return false;
+        }
+    if(c.match(correct_way))
+          true;
+    else{
+          document.getElementById("msg").innerHTML="Invalid Name";
+          return false;
+          }
+
+  }
+
+  </script>
+</head>
+<body>
+<div class="container mt-3">
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="view-customers">View Customers</a>
+    </li>
+
+  </ul>
+</div>
+
+<div class="container mt-3">
+  <form name="myForm" onsubmit="return myFun()" action="/save-customers" method="post">
+    <div class="mb-3 mt-3">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value=""></input>
+      <span id="msg"></span>
+    </div>
+    <div class="mb-3">
+      <label for="phone">Phone Number:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone" value=""></input>
+      <span id="messages"></span>
+    </div>
+     <div class="mb-3 mt-3">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value=""></input>
+      <span id="Message"></span>
+    </div>
+    <div class="mb-3">
+      <label for="room">Room Number:</label>
+      <input type="number" class="form-control" id="room" placeholder="Enter Room Number" name="room"></input>
+    </div>
+    <div class="mb-3">
+      <label for="amount">Total Amount</label>
+      <input type="number" class="form-control" id="amount" placeholder="Enter Total Amount" name="amount"></input>
+    </div>
+
+    <input type="submit" class="btn btn-primary">
+  </form>
+</div>
+
+
+
+</body>
+</html>
